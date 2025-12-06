@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="script.js"></script>
+  <style>
+    .menudetails {
+      margin-top: 20px;
+    }
+.spacer{
+  margin: 20px;
+}
+    h1 {
+      /* justify-content: center; */
+      text-shadow: 0px 5px 5px rgb(243, 40, 9);
+      margin-left: 20px;
+      text-align: center;
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    .ulitems {
+      list-style-type: square;
+      font-size: 15px;
+      color: white;
+      margin-left: 20px;
+      line-height: 1.2;
+    }
+
+    .inpbox {
+      width: 50px;
+      margin-left: 20px;
+      border-radius: 5px;
+      padding: 5px;
+      text-align: center;
+    }
+
+    .itemtable {
+      margin-left: 20px;
+      margin-top: 10px;
+      color: white;
+      font-size: 15px;
+      
+      
+    }
+
+    table {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      word-wrap: break-word;
+      
+      /* breaks long words */
+      overflow-wrap: break-word;
+      display: flex;
+      flex-wrap: wrap;
+      flex-grow: 1;
+      overflow-y: auto;
+      overflow-x: auto;
+
+      width: 100%;
+  border-collapse: collapse;
+  table-layout:auto ;
+    }
+
+    th {
+      background-color: rgb(58, 60, 64);
+    }
+
+    td {
+      padding-left: 10px;
+    }
+.adc{
+  margin: 30px; padding: 10px; border: 2px solid #0b0808; color: black;
+  border-radius: 20px;
+ padding-left:10% ;
+ -webkit-backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+.adc h2{
+  font-size: 30px;
+  color: #363232;
+  display: inline-block;
+  
+}
+.pobtn{
+margin-top: 10px; padding: 5px 20px;
+}
+
+  
+.ulcart{
+  list-style-type:none; padding-left:0;
+}
+.cartimg{
+  height: 30px; 
+  width: auto;
+}
+.pobtn{
+  margin-left:0px ;
+}
+
+        
+  </style>
+</head>
+
+<body class="body">
+  <header class="header">
+    <img src="./img/logo.png" class="logo" alt="Company Logo" />
+    <div class="button">
+       <a href="index.html"><button class="btn" type="button">Home</button></a>
+       <a href="gallery.html"><button class="btn" type="button">Gallery</button></a> 
+        <a href="about.html"><button class="btn" type="button">About</button></a>
+        <a href="#footer"><button class="btn" type="button">Contact</button></a>
+      </div>
+  </header>
+  <div>
+    <div class="spacer">
+      <div class="menudetails">
+        <h1 class="menu_heading">Our Menu</h1>
+
+        <div class="types">
+          <div class="box1 boxes">
+            <div>
+              <h1>Appetizers</h1>
+             
+              <table class="itemtable" border="2px">
+                <th>Appetizers</th>
+                <th>Price</th>
+                <th>Qty.</th>
+                <tr>
+                  <td>
+                    <label for="samosa">Samosa</label>
+                  </td>
+                  <td>
+                    <lebel for="price1"> - ₹99</lebel>
+                  </td>
+                  <td>
+                    <input class="inpbox" type="number" id="samosa" name="samosa" min="1" required
+                      title="Enter quantity for Samosa" placeholder="Qty" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="spring-rolls">Spring Rolls</label>
+                  </td>
+                  <td>
+                    <lebel for="price2"> - ₹119</lebel>
+                  </td>
+                  <td>
+                    <input class="inpbox" type="number" id="spring-rolls" name="spring-rolls" min="1" required
+                      title="Enter quantity for Spring Rolls" placeholder="Qty" />
+                  </td>
+                  
+                </tr>
+                <tr>
+                  <td>
+                    <label for="bruschetta">Bruschetta</label>
+                  </td>
+                  <td>
+                    <lebel for="price3"> - ₹149</lebel>
+                  </td>
+                  <td>
+                    <input class="inpbox" type="number" id="bruschetta" name="bruschetta" min="1" required
+                      title="Enter quantity for Bruschetta" placeholder="Qty" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="garlic-bread">Garlic Bread</label>
+                  </td>
+                  <td>
+                    <lebel for="price4"> - ₹89</lebel>
+                  </td>
+                  <td>
+                    <input class="inpbox" type="number" id="garlic-bread" name="garlic-bread" min="1" required
+                      title="Enter quantity for Garlic Bread" placeholder="Qty" />
+                  </td>
+                  
+                </tr>
+                <tr>
+                  <td>
+                    <label for="stuffed-mushrooms">Stuffed Mushrooms</label>
+                  </td>
+                  <td>
+                    <lebel for="price5"> - ₹179</lebel>
+                  </td>
+                  <td>
+                    <input class="inpbox" type="number" id="stuffed-mushrooms" name="stuffed-mushrooms" min="1" required
+                      title="Enter quantity for Stuffed Mushrooms" placeholder="Qty" />
+                  </td>
+                </tr>
+
+              </table>
+              <button type="button" class="add-to-cart-btn btn">Add to Cart</button>
+            </div>
+         
+          </div>
+          <div class="box2 boxes">
+            <div>
+              <h1>Soups</h1>
+          
+              <table border="2px" class="itemtable">
+                <th>soup</th>
+                <th>Price</th>
+                <th>Qty.</th>
+                <tr>
+
+                  <td>
+                    <label for="tomato-soup">Tomato Soup</label>
+                  </td>
+
+                  <td>
+                    <lebel for="price1"> - ₹159</lebel>
+                  </td>
+                  <td>
+                    <input class="inpbox" type="number" id="tomato-soup" name="tomato-soup" min="1" required
+                      title="Enter quantity for Tomato Soup" placeholder="Qty" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="chicken-soup">Chicken Soup</label>
+                  </td>
+                  <td>
+                    <lebel for="price2"> - ₹189</lebel>
+                  </td>
+                  <td>
+                    <input class="inpbox" type="number" id="chicken-soup" name="chicken-soup" min="1" required
+                      title="Enter quantity for Chicken Soup" placeholder="Qty" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="mushroom-soup">Mushroom Soup</label>
+                  </td>
+                  <td>
+                    <lebel for="price3"> - ₹219</lebel>
+                  </td>
+                  <td>
+                    <input class="inpbox" type="number" id="mushroom-soup" name="mushroom-soup" min="1" required
+                      title="Enter quantity for Mushroom Soup" placeholder="Qty" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="vegetable-soup">Vegetable Soup</label>
+                  </td>
+                  <td>
+                    <lebel for="price4"> - ₹149</lebel>
+                  </td>
+                  <td>
+                    <input class="inpbox" type="number" id="vegetable-soup" name="vegetable-soup" min="1" required
+                      title="Enter quantity for Vegetable Soup" placeholder="Qty" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="sweet-corn-soup">Sweet Corn Soup</label>
+                  </td>
+                  <td>
+                    <lebel for="price5"> - ₹179</lebel>
+                  </td>
+                  <td>
+                    <input class="inpbox" type="number" id="sweet-corn-soup" name="sweet-corn-soup" min="1" required
+                      title="Enter quantity for Sweet Corn Soup" placeholder="Qty" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="lentil-soup">Lentil Soup</label>
+                  </td>
+                  <td>
+                    <lebel for="price6"> -  ₹129</lebel>
+                  </td>
+                  <td>
+                    <input class="inpbox" type="number" id="lentil-soup" name="lentil-soup" min="1" required
+                      title="Enter quantity for Lentil Soup" placeholder="Qty" />
+                  </td>
+                </tr>
+              </table>
+              <button type="button" class="add-to-cart-btn btn">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="types">
+          <div class="box3 boxes">
+            <div>
+              <h1>Salad</h1>
+
+              <table class="itemtable" border="2px">
+                <th>Salad</th>
+                <th>Price</th>
+                <th>Qty.</th>
+                <tr>
+                  <td>
+                    <label for="caesar-salad">Caesar Salad</label>
+                  </td>
+                  <td>
+                    <lebel for="price1"> -  ₹219</lebel>
+                  </td>
+                  <td>
+                    <input class="inpbox" type="number" id="caesar-salad" name="caesar-salad" min="1" required
+                      title="Enter quantity for Caesar Salad" placeholder="Qty" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="greek-salad">Greek Salad</label>
+                  </td>
+                  <td>
+                    <lebel for="price2"> -  ₹239</lebel>
+                  </td>
+                  <td>
+                    <input class="inpbox" type="number" id="greek-salad" name="greek-salad" min="1" required
+                      title="Enter quantity for Greek Salad" placeholder="Qty" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="garden-salad">Garden Salad</label>
+                  </td>
+                  <td>
+                    <lebel for="price3"> -  ₹189</lebel>
+                  </td>
+                  <td>
+                    <input class="inpbox" type="number" id="garden-salad" name="garden-salad" min="1" required
+                      title="Enter quantity for Garden Salad" placeholder="Qty" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="fruit-salad">Fruit Salad</label>
+                  </td>
+                  <td>
+                    <lebel for="price4"> - ₹159</lebel>
+                  </td>
+                  <td>
+                    <input class="inpbox" type="number" id="fruit-salad" name="fruit-salad" min="1" required
+                      title="Enter quantity for Fruit Salad" placeholder="Qty" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="pasta-salad">Pasta Salad</label>
+                  </td>
+                  <td>
+                    <lebel for="price5"> - ₹199</lebel>
+                  </td>
+                  <td>
+                    <input class="inpbox" type="number" id="pasta-salad" name="pasta-salad" min="1" required
+                      title="Enter quantity for Pasta Salad" placeholder="Qty" />
+              </table>
+              <button type="button" class="add-to-cart-btn btn">Add to Cart</button>
+            </div>
+            
+          </div>
+          <div class="box4 boxes">
+            <div>
+
+              <h1>Main Course(Veg)</h1>
+            
+              <table class="itemtable" border="2px">
+                <th>
+                  Main Course(Veg)
+                </th>
+                <th>Price</th>
+                <th>Qty.</th>
+                <tr>
+                  <td>
+                    <label for="paneer-butter-masala">Paneer Butter Masala</label>
+                  </td>
+                  <td>
+                    <lebel for="price1"> - ₹299</lebel>
+                  </td>
+                  <td>
+                    <input class="inpbox" type="number" id="paneer-butter-masala" name="paneer-butter-masala" min="1"
+                      required title="Enter quantity for Paneer Butter Masala" placeholder="Qty" />
+                  </td>
+
+                </tr>
+                <tr>
+                  <td>
+                    <label for="chole-bhature">Chole Bhature</label>
+                  </td>
+                  <td>
+                    <lebel for="price2"> -  ₹269</lebel>
+                  </td>
+                  <td>
+                    <input class="inpbox" type="number" id="chole-bhature" name="chole-bhature" min="1" required
+                      title="Enter quantity for Chole Bhature" placeholder="Qty" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="vegetable-curry">Vegetable Curry</label>
+                  </td>
+                  <td>
+                    <lebel for="price3"> - ₹249</lebel>
+                  </td>
+                  <td>
+                    <input class="inpbox" type="number" id="vegetable-curry" name="vegetable-curry" min="1" required
+                      title="Enter quantity for Vegetable Curry" placeholder="Qty" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="dal-makhani">Dal Makhani</label>
+                  </td>
+                  <td>
+                    <lebel for="price4"> - ₹219</lebel>
+                  </td>
+                  <td>
+                    <input class="inpbox" type="number" id="dal-makhani" name="dal-makhani" min="1" required
+                      title="Enter quantity for Dal Makhani" placeholder="Qty" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="aloo-gobi">Aloo Gobi</label>
+                  </td>
+                  <td>
+                    <lebel for="price5"> - ₹239</lebel>
+                  </td>
+                  <td>
+                    <input class="inpbox" type="number" id="aloo-gobi" name="aloo-gobi" min="1" required
+                      title="Enter quantity for Aloo Gobi" placeholder="Qty" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="baingan-bharta">Baingan Bharta</label>
+                  </td>
+                  <td>
+                    <lebel for="price6"> -  ₹209</lebel>
+                  </td>
+                  <td>
+                    <input class="inpbox" type="number" id="baingan-bharta" name="baingan-bharta" min="1" required
+                      title="Enter quantity for Baingan Bharta" placeholder="Qty" />
+                  </td>
+                </tr>
+              </table>
+              <button type="button" class="add-to-cart-btn btn">Add to Cart</button>
+            </div>
+          
+          </div>
+        </div>
+
+        <div class="types">
+          <div class="box5 boxes">
+            <div>
+              <h1>Main Course(Non-Veg)</h1>
+             
+              <table class="itemtable" border="2px">
+                <th>Main Course(Non-Veg)</th>
+                <th>Price</th>
+                <th>Qty.</th>
+                <tr>
+                  <td>
+                    <label for="butter-chicken">Butter Chicken</label>
+                  </td>
+                  <td>
+                    <lebel for="price1"> - ₹349</lebel>
+                  </td>
+                  <td>
+                    <input class="inpbox" type="number" id="butter-chicken" name="butter-chicken" min="1" required
+                      title="Enter quantity for Butter Chicken" placeholder="Qty" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="grilled-chicken">Grilled Chicken</label>
+                  </td>
+                  <td>
+                    <lebel for="price2"> -  ₹329</lebel>
+                  </td>
+                  <td>
+                    <input class="inpbox" type="number" id="grilled-chicken" name="grilled-chicken" min="1" required
+                      title="Enter quantity for Grilled Chicken" placeholder="Qty" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="fish-curry">Fish Curry</label>
+                  </td>
+                  <td>
+                    <lebel for="price3"> -  ₹389</lebel>
+                  </td>
+                  <td>
+                    <input class="inpbox" type="number" id="fish-curry" name="fish-curry" min="1" required
+                      title="Enter quantity for Fish Curry" placeholder="Qty" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="chicken-biryani">Chicken Biryani</label>
+                  </td>
+                  <td>
+                    <lebel for="price4"> -  ₹299</lebel>
+                  </td>
+                  <td>
+                    <input class="inpbox" type="number" id="chicken-biryani" name="chicken-biryani" min="1" required
+                      title="Enter quantity for Chicken Biryani" placeholder="Qty" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="mutton-rogan-josh">Mutton Rogan Josh</label>
+                  </td>
+                  <td>
+                    <lebel for="price5"> - ₹429</lebel>
+                  </td>
+                  <td>
+                    <input class="inpbox" type="number" id="mutton-rogan-josh" name="mutton-rogan-josh" min="1" required
+                      title="Enter quantity for Mutton Rogan Josh" placeholder="Qty" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="egg-curry">Egg Curry</label>
+                  </td>
+                  <td>
+                    <lebel for="price6"> -  ₹259</lebel>
+                  </td>
+                  <td>
+                    <input class="inpbox" type="number" id="egg-curry" name="egg-curry" min="1" required
+                      title="Enter quantity for Egg Curry" placeholder="Qty" />
+                  </td>
+                </tr>
+
+              </table>
+              <button type="button" class="add-to-cart-btn btn">Add to Cart</button>
+            </div>
+            
+          </div>
+          <div class="box6 boxes">
+            <div>
+              <h1>Rice & Biryani</h1>
+              
+              <table class="itemtable" border="2px">
+                <th>Rice & Biryani</th>
+                <th>Price</th>
+                <th>Qty.</th>
+                <tr>
+                  <td>
+                    <label for="vegetable-biryani">Vegetable Biryani</label>
+                  </td>
+                  <td>
+                    <lebel for="price1"> - ₹269</lebel>
+                  </td>
+                  <td>
+                    <input class="inpbox" type="number" id="vegetable-biryani" name="vegetable-biryani" min="1" required
+                      title="Enter quantity for Vegetable Biryani" placeholder="Qty" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="chicken-biryani2">Chicken Biryani</label>
+                  </td>
+                  <td>
+                    <lebel for="price2"> - ₹299</lebel>
+                  </td>
+                  <td>
+                    <input class="inpbox" type="number" id="chicken-biryani2" name="chicken-biryani2" min="1" required
+                      title="Enter quantity for Chicken Biryani" placeholder="Qty" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="egg-fried-rice">Egg Fried Rice</label>
+                  </td>
+                  <td>
+                    <lebel for="price3"> -  ₹249</lebel>
+                  </td>
+                  <td>
+                    <input class="inpbox" type="number" id="egg-fried-rice" name="egg-fried-rice" min="1" required
+                      title="Enter quantity for Egg Fried Rice" placeholder="Qty" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="jeera-rice">Jeera Rice</label>
+                  </td>
+                  <td>
+                    <lebel for="price4"> - ₹199</lebel>
+                  </td>
+                  <td>
+                    <input class="inpbox" type="number" id="jeera-rice" name="jeera-rice" min="1" required
+                      title="Enter quantity for Jeera Rice" placeholder="Qty" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="peas-pulao">Peas Pulao</label>
+                  </td>
+                  <td>
+                    <lebel for="price5"> -  ₹239</lebel>
+                  </td>
+                  <td>
+                    <input class="inpbox" type="number" id="peas-pulao" name="peas-pulao" min="1" required
+                      title="Enter quantity for Peas Pulao" placeholder="Qty" />
+                  </td>
+                </tr>
+              </table>
+              <button type="button" class="add-to-cart-btn btn">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="types">
+          <div class="box7 boxes">
+            <div>
+              <h1>Bread/Roti/Naan</h1>
+              <table class="itemtable" border="2px">
+                <th>Bread/Roti/Naan</th>
+                <th>Price</th>
+                <th>Qty.</th>
+                <tr>
+                  <td>
+                    <label for="butter-naan">Butter Naan</label>
+                  </td>
+                  <td>
+                    <lebel for="price1"> - ₹79</lebel>
+                  </td>
+                  <td>
+                    <input class="inpbox" type="number" id="butter-naan" name="butter-naan" min="1" required
+                      title="Enter quantity for Butter Naan" placeholder="Qty" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="garlic-naan">Garlic Naan</label>
+                  </td>
+                  <td>
+                    <lebel for="price2"> - ₹89</lebel>
+                  </td>
+                  <td>
+                    <input class="inpbox" type="number" id="garlic-naan" name="garlic-naan" min="1" required
+                      title="Enter quantity for Garlic Naan" placeholder="Qty" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="roti">Roti</label>
+                  </td>
+                  <td>
+                    <lebel for="price3"> - ₹49</lebel>
+                  </td>
+                  <td>
+                    <input class="inpbox" type="number" id="roti" name="roti" min="1" required
+                      title="Enter quantity for Roti" placeholder="Qty" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="paratha">Paratha</label>
+                  </td>
+                  <td>
+                    <lebel for="price4"> -  ₹69</lebel>
+                  </td>
+                  <td>
+                    <input class="inpbox" type="number" id="paratha" name="paratha" min="1" required
+                      title="Enter quantity for Paratha" placeholder="Qty" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="chapati">Chapati</label>
+                  </td>
+                  <td>
+                    <lebel for="price5"> - ₹39</lebel>
+                  </td>
+                  <td>
+                    <input class="inpbox" type="number" id="chapati" name="chapati" min="1" required
+                      title="Enter quantity for Chapati" placeholder="Qty" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="stuffed-naan">Stuffed Naan</label>
+                  </td>
+                  <td>
+                    <lebel for="price6"> -₹99</lebel>
+                  </td>
+                  <td>
+                    <input class="inpbox" type="number" id="stuffed-naan" name="stuffed-naan" min="1" required
+                      title="Enter quantity for Stuffed Naan" placeholder="Qty" />
+                  </td>
+                </tr>
+              </table>
+              <button type="button" class="add-to-cart-btn btn">Add to Cart</button>
+            </div>
+          </div>
+          <div class="box8 boxes">
+            <div>
+              <h1>Desserts</h1>
+              <table class="itemtable" border="2px">
+                <th>Desserts</th>
+                <th>Price</th>
+                <th>Qty.</th>
+                <tr>
+                  <td>
+                    <label for="gulab-jamun">Gulab Jamun</label>
+                  </td>
+                  <td>
+                    <lebel for="price1"> -  ₹129</lebel>
+                  </td>
+                  <td>
+                    <input class="inpbox" type="number" id="gulab-jamun" name="gulab-jamun" min="1" required
+                      title="Enter quantity for Gulab Jamun" placeholder="Qty" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="ice-cream">Ice Cream</label>
+                  </td>
+                  <td>
+                    <lebel for="price2"> -  ₹99</lebel>
+                  </td>
+                  <td>
+                    <input class="inpbox" type="number" id="ice-cream" name="ice-cream" min="1" required
+                      title="Enter quantity for Ice Cream" placeholder="Qty" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="rasmalai">Rasmalai</label>
+                  </td>
+                  <td>
+                    <lebel for="price3"> - ₹149</lebel>
+                  </td>
+                  <td>
+                    <input class="inpbox" type="number" id="rasmalai" name="rasmalai" min="1" required
+                      title="Enter quantity for Rasmalai" placeholder="Qty" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="kheer">Kheer</label>
+                  </td>
+                  <td>
+                    <lebel for="price4"> -₹119</lebel>
+                  </td>
+                  <td>
+                    <input class="inpbox" type="number" id="kheer" name="kheer" min="1" required
+                      title="Enter quantity for Kheer" placeholder="Qty" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="chocolate-brownie">Chocolate Brownie</label>
+                  </td>
+                  <td>
+                    <label for="price5"> - ₹159</lebel>
+                  </td>
+                  <td>
+                    <input class="inpbox" type="number" id="chocolate-brownie" name="chocolate-brownie" min="1" required
+                      title="Enter quantity for Chocolate Brownie" placeholder="Qty" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="fruit-salad2">Fruit Salad</label>
+                  </td>
+                  <td>
+                    <lebel for="price6"> -  ₹129</lebel>
+                  </td>
+                  <td>
+                    <input class="inpbox" type="number" id="fruit-salad2" name="fruit-salad2" min="1" required
+                      title="Enter quantity for Fruit Salad" placeholder="Qty" />
+                  </td>
+                </tr>
+              </table>
+              <button type="button" class="add-to-cart-btn btn">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="types">
+          <div class="box9 boxes">
+            <div>
+              <h1>Beverages</h1>
+              <table class="itemtable" border="2px">
+                <th>Beverages</th>
+                <th>Price</th>
+                <th>Qty.</th>
+                <tr>
+                  <td>
+                    <label for="coffee">Coffee</label>
+                  </td>
+                  <td>
+                    <lebel for="price1"> - ₹79</lebel>
+                  </td>
+                  <td>
+                    <input class="inpbox" type="number" id="coffee" name="coffee" min="1" required
+                      title="Enter quantity for Coffee" placeholder="Qty" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="tea">Tea</label>
+                  </td>
+                  <td>
+                    <lebel for="price2"> - ₹49</lebel>
+                  </td>
+                  <td>
+                    <input class="inpbox" type="number" id="tea" name="tea" min="1" required
+                      title="Enter quantity for Tea" placeholder="Qty" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="lemonade">Lemonade</label>
+                  </td>
+                  <td>
+                    <lebel for="price3"> - ₹69</lebel>
+                  </td>
+                  <td>
+                    <input class="inpbox" type="number" id="lemonade" name="lemonade" min="1" required
+                      title="Enter quantity for Lemonade" placeholder="Qty" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="soda">Soda</label>
+                  </td>
+                  <td>
+                    <lebel for="price4"> -₹39</lebel>
+                  </td>
+                  <td>
+                    <input class="inpbox" type="number" id="soda" name="soda" min="1" required
+                      title="Enter quantity for Soda" placeholder="Qty" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="milkshake">Milkshake</label>
+                  </td>
+                  <td>
+                    <lebel for="price5"> -₹99</lebel>
+                  </td>
+                  <td>
+                    <input class="inpbox" type="number" id="milkshake" name="milkshake" min="1" required
+                      title="Enter quantity for Milkshake" placeholder="Qty" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="juice">Juice</label>
+                  </td>
+                  <td>
+                    <lebel for="price6"> - ₹79</lebel>
+                  </td>
+                  <td>
+                    <input class="inpbox" type="number" id="juice" name="juice" min="1" required
+                      title="Enter quantity for Juice" placeholder="Qty" />
+                  </td>
+                </tr>
+              </table>
+              <button type="button" class="add-to-cart-btn btn">Add to Cart</button>
+            </div>
+          </div>
+          <div class="box10 boxes">
+            <div>
+              <h1>Fast Food</h1>
+              <table class="itemtable" border="2px">
+                <th>Fast Food</th>
+                <th>Price</th>
+                <th>Qty.</th>
+                <tr>
+                  <td>
+                    <label for="burger">Burger</label>
+                  </td>
+                  <td>
+                    <lebel for="price1"> - ₹159</lebel>
+                  </td>
+                  <td>
+                    <input class="inpbox" type="number" id="burger" name="burger" min="1" required
+                      title="Enter quantity for Burger" placeholder="Qty" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="pizza">Pizza</label>
+                  </td>
+                  <td>
+                    <lebel for="price2"> -  ₹249</lebel>
+                  </td>
+                  <td>
+                    <input class="inpbox" type="number" id="pizza" name="pizza" min="1" required
+                      title="Enter quantity for Pizza" placeholder="Qty" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="french-fries">French Fries</label>
+                  </td>
+                  <td>
+                    <lebel for="price3"> -  ₹99</lebel>
+                  </td>
+                  <td>
+                    <input class="inpbox" type="number" id="french-fries" name="french-fries" min="1" required
+                      title="Enter quantity for French Fries" placeholder="Qty" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="hot-dog">Hot Dog</label>
+                  </td>
+                  <td>
+                    <lebel for="price4"> -₹129</lebel>
+                  </td>
+                  <td>
+                    <input class="inpbox" type="number" id="hot-dog" name="hot-dog" min="1" required
+                      title="Enter quantity for Hot Dog" placeholder="Qty" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="sandwich">Sandwich</label>
+                  </td>
+                  <td>
+                    <lebel for="price5"> -  ₹149</lebel>
+                  </td>
+                  <td>
+                    <input class="inpbox" type="number" id="sandwich" name="sandwich" min="1" required
+                      title="Enter quantity for Sandwich" placeholder="Qty" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="tacos">Tacos</label>
+                  </td>
+                  <td>
+                    <lebel for="price6"> - ₹179</lebel>
+                  </td>
+                  <td>
+                    <input class="inpbox" type="number" id="tacos" name="tacos" min="1" required
+                      title="Enter quantity for Tacos" placeholder="Qty" />
+                  </td>
+                </tr>
+              </table>
+              <button type="button" class="add-to-cart-btn btn">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+    <div class="adc" id="cart-container" >
+  <h2>Your Cart </h2>  <img class="cartimg" alt="drawing of a cat" src="./img/cart.png" >
+  
+  <ul id="cart-list" class="ulcart" ></ul>
+  <button class="pobtn btn" type="button" id="order-btn" >Place Order</button>
+</div>
+  </div>
+  <footer>
+    <div>
+      <h3>Contact Us</h3>
+      <p>The Royal Thali</p>
+      <p>123 Flavor Street,<br>Lucknow,U.P.,India</p>
+      <p><strong>Phone:</strong> +1 (234) 567-8901</p>
+      <p><strong>Email:</strong> contact@theroyalthali.com</p>
+    </div>
+
+    <div>
+      <h3>Follow Us</h3>
+      <p>
+        <a href="#"><i class="fab fa-facebook-f" aria-label="facebook"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Twitter" ><i class="fab fa-twitter"></i></a>
+      </p>
+    </div>
+
+    <div class="copyright">
+      &copy; 2025 The Royal Thali. All rights reserved.
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+      .menudetails {
+        margin-top: 200px;
+      }
+      .table_box {
+        border: 2px solid rgb(250, 247, 247);
+        padding-left: 20px;
+        padding-right: 20px;
+        width: 600px;
+        height: 500px;
+        margin: 0 auto;
+        border-radius: 50% 10% 50% 10% / 10% 50% 10% 50%;
+         background-color: rgb(255 255 255/ 30%);
+         -webkit-backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+        /* background: hsla(197, 100%, 63%, 1);
+
+        background: linear-gradient(
+          90deg,
+          hsla(197, 100%, 63%, 1) 0%,
+          hsla(294, 100%, 55%, 1) 100%
+        );
+
+        background: -moz-linear-gradient(
+          90deg,
+          hsla(197, 100%, 63%, 1) 0%,
+          hsla(294, 100%, 55%, 1) 100%
+        );
+
+        background: -webkit-linear-gradient(
+          90deg,
+          hsla(197, 100%, 63%, 1) 0%,
+          hsla(294, 100%, 55%, 1) 100%
+        ); */
+
+        filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#40C9FF", endColorstr="#E81CFF", GradientType=1 );
+        display: flex;
+        justify-content: center;
+
+        height: 750px;
+        /* width: 100%; */
+      }
+      .table_form {
+        display: flex;
+        flex-direction: column;
+        padding: 50px;
+        gap: 20px;
+        margin-top: 30px;
+        /* margin-bottom :0px ; */
+      }
+      .inpbox {
+        height: 30px;
+        width: 400px;
+        border-radius: 10px;
+        border: 1px solid black;
+        padding-left: 10px;
+      }
+      
+      
+    </style>
+  </head>
+
+  <body class="body">
+    <header class="header">
+      <img src="./img/logo.png" class="logo" alt="Company Logo" />
+      <div class="button">
+       <a href="index.html"><button class="btn" type="button">Home</button></a> 
+       <a href="gallery.html"><button class="btn" type="button">Gallery</button></a>
+        <a href="about.html"><button class="btn" type="button">About</button></a>
+        <a href="#footer"><button class="btn" type="button">Contact</button></a>
+      </div>
+    </header>
+
+    <div class="container">
+      <!-- <h1 class="menu_heading">Table Booking</h1> -->
+      <div class="table_box">
+        <div>
+          <form class="table_form">
+            <h1>BOOK A TABLE</h1>
+            <label for="name">Name:</label>
+            <input class="inpbox" type="text" id="name" name="name" required />
+
+            <label for="date">Date:</label>
+            <input class="inpbox" type="date" id="date" name="date" required />
+
+            <label for="time">Time:</label>
+            <input class="inpbox" type="time" id="time" name="time" required />
+
+            <label for="people">Number of People:</label>
+            <input
+              class="inpbox"
+              type="number"
+              id="people"
+              name="people"
+              min="1"
+              required
+            />
+
+            <button class="btn" type="submit">Book Table</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer>
+    <div id="footer">
+      <h3>Contact Us</h3>
+      <p>The Royal Thali</p>
+      <p>123 Flavor Street,<br>Lucknow,U.P.,India</p>
+      <p><strong>Phone:</strong> +1 (234) 567-8901</p>
+      <p><strong>Email:</strong> contact@theroyalthali.com</p>
+    </div>
+
+    <div>
+      <h3>Follow Us</h3>
+      <p>
+        <a href="#"><i class="fab fa-facebook-f" aria-label="facebook"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Twitter" ><i class="fab fa-twitter"></i></a>
+      </p>
+    </div>
+
+    <div class="copyright">
+      &copy; 2025 The Royal Thali. All rights reserved.
+    </div>
+  </footer>
+  </body>
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const form = document.querySelector('.table_form');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault(); // Prevent actual submission
+
+      // Generate a random table number between 1 and 30 (adjust as needed)
+      const tableNumber = Math.floor(Math.random() * 30) + 1;
+
+      // Get user's name for personalization
+      const name = document.getElementById('name').value;
+
+      // Display the popup message
+      alert(
+        `Hi ${name}, your table has been successfully booked!\nYour allotted table number is ${tableNumber}.`
+      );
+
+      // Optionally clear the form after booking
+      form.reset();
+    });
+  });
+</script>
+
+</html>

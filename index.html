@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <style>
+    .btn-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+    .mnubtn {
+      display: inline-block;
+  padding: 10px 20px;
+  font-size: 25px;
+  color: white;
+  background-color: #080201;
+  border: none;
+  border-radius: 15px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  height: 30px;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    }
+    .mnubtn:hover{
+      color: black;
+      background-color: aliceblue;
+      border: 2px solid black;
+      transition: 0.8s ease;
+      border-radius: 40px;
+      box-shadow: 0 0 10px rgb(81, 80, 81);
+      transform: scale(1.2);
+
+    }
+    .tblbook{
+      width: 250px;
+      
+
+    }
+    .rtimg{
+      background-image: url('./img/table_icon.png');
+      background-size: cover;
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+      mix-blend-mode:black;
+    }
+    
+  </style>
+
+  <body class="body">
+    <header class="header">
+      <img src="./img/logo.png" class="logo" alt="Company Logo" />
+      <div class="button">
+       <a href="#home"><button class="btn" type="button">Home</button></a> 
+       <a href="gallery.html"><button class="btn" type="button">Gallery</button></a>
+        <a href="about.html"><button class="btn" type="button">About</button></a>
+        <a href="#footer"><button class="btn" type="button">Contact</button></a>
+      </div>
+    </header>
+    
+    <div class="container">
+      <div class="title" id="home">
+        <img src="./img/plate.png" class="title_img" alt="Food Image" />
+      <h1 class="heading">"Welcome to The Royal Thali"</h1>
+      <p class="subheading" class="heading">Deliciousness jumping into the mouth</p>
+      <p class="heading2">
+        "Check out our menu to explore a variety of mouth-watering dishes"
+      </p>
+      <div class="btn-container"><a href="menu.html" class="mnubtn">Menu</a></div>
+      
+      <p class="heading2">
+        "Reserve your table now and enjoy an unforgettable dining experience"
+      </p>
+      <div class="btn-container"><a href="tablebooking.html"   class="tblbook mnubtn"><section class="rtimg"></section>Reserve a Table</a></div>
+
+    </div>
+
+    
+      </div>
+
+      <!-- <h1 class="menu_head">Menu</h1> -->
+    </div>
+    
+    <footer >
+    <div id="footer">
+      <h3>Contact Us</h3>
+      <p>The Royal Thali</p>
+      <p>123 Flavor Street,<br>Lucknow,U.P.,India</p>
+      <p><strong>Phone:</strong> +1 (234) 567-8901</p>
+      <p><strong>Email:</strong> contact@theroyalthali.com</p>
+    </div>
+
+    <div>
+      <h3>Follow Us</h3>
+      <p>
+        <a href="#"><i class="fab fa-facebook-f" aria-label="facebook"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Twitter" ><i class="fab fa-twitter"></i></a>
+        
+      </p>
+    </div>
+
+    <div class="copyright">
+      &copy; 2025 The Royal Thali. All rights reserved.
+    </div>
+  </footer>
+  </body>
+</html>

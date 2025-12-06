@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .rotate {
+  /* animation: rotation 2s infinite linear; */
+  height: 200px;
+  width: 200px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -100px;
+  margin-left: -100px;
+  border-radius: 50%;
+}
+/* @keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+.rotate:hover {
+  animation: rotation 2s infinite linear;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+      
+      
+    </style>
+  </head>
+
+  <body class="body">
+    <header class="header">
+      <imgsrc="./logo.png" class="logo">
+      <div class="button">
+        <button class="btn">Home</button>
+        <button class="btn">About</button>
+        <button class="btn">Contact</button>
+      </div>
+    </header>
+    
+    <img
+      src="./img/rotate2.png"
+      alt="background image"
+      
+      class="rotate">
+
+  </body>
+</html>
