@@ -369,3 +369,51 @@ background: linear-gradient(273deg, rgba(218, 247, 247, 1) 0%, rgba(191, 189, 18
       font-size: 14px;
       color: #ccc;
     }
+     .order-details-box {
+  width: 90%;
+  max-width: 500px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.order-details-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.order-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.order-form input,
+.order-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #999;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.place-order-btn {
+  margin-top: 10px;
+  padding: 12px;
+  background: #080201;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.place-order-btn:hover {
+  background: white;
+  color: black;
+  border: 2px solid black;
+  transition: 0.4s;
+}

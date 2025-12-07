@@ -953,8 +953,39 @@ margin-top: 10px; padding: 5px 20px;
     <div class="adc" id="cart-container" >
   <h2>Your Cart </h2>  <img class="cartimg" alt="drawing of a cat" src="./img/cart.png" >
   
+  <!-- <ul id="cart-list" class="ulcart" ></ul>
+  <button class="pobtn btn" type="button" id="order-btn" >Place Order</button> -->
+  
+  
   <ul id="cart-list" class="ulcart" ></ul>
-  <button class="pobtn btn" type="button" id="order-btn" >Place Order</button>
+  <!-- Customer Details Form Before Ordering -->
+<div class="order-details-box">
+  <h2>Enter Your Details Before Ordering</h2>
+
+  <form class="order-form">
+    <label>Your Name</label>
+    <input type="text" placeholder="Enter your full name" required>
+
+    <label>Phone Number</label>
+    <input type="tel" placeholder="Enter your phone number" required>
+
+    <label>Full Address</label>
+    <textarea placeholder="Enter complete address, city & pincode" rows="3" required></textarea>
+    <!-- Payment Section -->
+    <label>Choose Payment Method</label>
+    <div class="payment-options">
+      <!-- <label><input type="radio" name="payment" value="UPI" required> UPI</label> -->
+      <label><input type="radio" name="payment" value="Cash on Delivery" required> Cash on Delivery (COD)</label>
+      <!-- <label><input type="radio" name="payment" value="Card" required> Credit / Debit Card</label> -->
+      <!-- <label><input type="radio" name="payment" value="NetBanking" required> Net Banking</label> -->
+    </div>
+    <!-- <button type="submit" class="place-order-btn">Proceed to Order</button> -->
+    <button class="pobtn btn" type="button" id="order-btn" >Place Order</button>
+  
+  </form>
+</div>
+
+
 </div>
   </div>
   <footer>
